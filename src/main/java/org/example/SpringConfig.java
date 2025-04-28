@@ -22,8 +22,4 @@ public class SpringConfig {
         return new Vacuum("Pylesos", 200);
     }
 
-    @Bean
-    public ApplianceComposite applianceComposite() {
-        return new ApplianceComposite(Arrays.asList(fridge(), dishwasher(), vacuum()));
-    }
 }

@@ -3,15 +3,13 @@ package org.example;
 import java.util.List;
 
 public class ApplianceComposite {
-    private List<Appliance> appliances;
+    private Appliance appliances;
 
-    public ApplianceComposite(List<Appliance> appliances) {
+    public ApplianceComposite(Appliance appliances) {
         this.appliances = appliances;
     }
 
     public void displayAll() {
-        for (Appliance appliance : appliances) {
-            appliance.cpc();
-        }
+        appliances.cpc();
     }
 }

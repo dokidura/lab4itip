@@ -7,8 +7,17 @@ public class Main {
         AnnotationConfigApplicationContext context =
                 new AnnotationConfigApplicationContext(SpringConfig.class);
 
-        ApplianceComposite applianceComposite = context.getBean(ApplianceComposite.class);
-        applianceComposite.displayAll();
+        Fridge fridge = context.getBean(Fridge.class);
+        Dishwasher dishwasher = context.getBean(Dishwasher.class);
+        Vacuum vacuum = context.getBean(Vacuum.class);
+
+        ApplianceComposite fridge1 = new ApplianceComposite(fridge);
+        ApplianceComposite dishwasher1 = new ApplianceComposite(dishwasher);
+        ApplianceComposite vacuum1 = new ApplianceComposite(vacuum);
+
+        fridge1.displayAll();
+        dishwasher1.displayAll();
+        vacuum1.displayAll();
 
         context.close();
     }
